@@ -198,13 +198,13 @@ open class TextAttributes {
     // MARK: - Striketrough style
     
     /// The strikethrough style attribute.
-    open var strikethroughStyle: NSUnderlineStyle {
+    open var strikethroughStyle: NSUnderlineStyle? {
         get {
             if let int = dictionary[NSAttributedString.Key.strikethroughStyle] as? Int {
                 let style = NSUnderlineStyle(rawValue: int)
                 return style
             } else {
-                return []
+                return nil
             }
         }
         
@@ -309,13 +309,13 @@ open class TextAttributes {
     // MARK: - Underline style
     
     /// The underline style attribute.
-    open var underlineStyle: NSUnderlineStyle {
+    open var underlineStyle: NSUnderlineStyle? {
         get {
             if let int = dictionary[NSAttributedString.Key.underlineStyle] as? Int {
                 let style = NSUnderlineStyle(rawValue: int)
                 return style
             } else {
-                return []
+                return nil
             }
         }
         
